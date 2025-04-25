@@ -1,0 +1,163 @@
+/*--  Overrides  --*/
+
+/* == Components == */
+
+.btn {
+	@apply font-medium;
+
+	i.uil {
+		@apply text-[1.2em]/none;
+	}
+	&.btn-square i.uil {
+		@apply text-[1.4em]/none;
+	}
+}
+
+.card {
+	.card-title {
+		@apply text-base font-medium;
+	}
+	
+	.card-body {
+		@apply gap-0;
+	}
+}
+
+.table {
+	th {
+		@apply font-medium;
+	}
+	&.table-selectable {
+		tr {
+			@apply transition-colors duration-200 has-[input[type=checkbox]:checked]:bg-primary/10;
+			/* hover:bg-base-200/25  */
+		}
+	}
+	&.table-actions {
+		tr td{
+			@apply last:w-1 last:whitespace-nowrap;
+		}
+	}
+	&.table-sticky {
+		thead {
+			@apply bg-base-100;
+			tr {
+				@apply border-0
+			}
+			th {
+				@apply sticky -top-4 bg-base-100 z-10 shadow-[inset_0_-1px_0_0_var(--tw-shadow-color)] shadow-base-200/50;
+			}
+		}
+	}
+}
+
+.menu {
+	.menu-title {
+		@apply text-base-content/70 font-medium;
+	}
+}
+
+.dropdown-content {
+	&.menu {
+		@apply bg-base-100 rounded-box z-1 w-52 p-2 shadow-lg shadow-base-300 mt-2 border border-base-200;
+		
+		i.uil {
+			@apply text-[1.2em]/none text-base-content/50;
+		}
+
+		li a {
+			@apply hover:bg-base-200/60 text-base-content/80 gap-3;
+		}
+		li a.error {
+			@apply hover:text-error [&:hover>i.uil]:text-error;
+		}
+	}
+	&.card {
+		@apply bg-base-100 rounded-box z-1 w-94 shadow-lg shadow-base-300 mt-2 border border-base-200;
+	}
+}
+
+.timeline:not(.timeline-vertical) > li > hr {
+	height: 2px;
+}
+
+.timeline.timeline-vertical > li > hr {
+	width: 2px;
+}
+
+/* == Forms == */
+
+.fieldset {
+	&, .input, .select {
+		@apply w-full;
+	}
+	.fieldset-legend {
+		@apply text-base-content/80 text-sm;
+	}
+	.input, .select {
+		i.uil {
+			@apply opacity-50 text-[1.1em]/none;
+		}
+	}
+	/* .fieldset-label,
+	.label {
+		@apply text-base-content/80 text-sm;
+	} */
+}
+
+.checkbox,
+.radio,
+.range,
+.toggle {
+	&:disabled {
+		@apply opacity-35;
+	}
+}
+
+.label {
+	@apply text-base-content/80 cursor-pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	-webkit-background-clip: text;
+}
+
+/* ==  Theme Specific  == */
+
+[data-theme="material"] {
+	.card {
+		@apply shadow-none;
+		&.card-border {
+			@apply border-0;
+		}
+	}
+}
+
+
+/* Badge */
+.badge {
+	@apply rounded-full font-semibold;
+}
+
+
+/* Form */
+.form-container {
+	@apply flex flex-col gap-2;
+}
+.form-cols {
+	@apply grid gap-4 grid-flow-col;
+}
+.form-subtitle {
+	@apply font-semibold text-lg [&:not(:first-child)]:mt-3;
+}
+.form-actions {
+	@apply flex flex-row-reverse justify-end gap-3 items-center pt-6;
+}
+
+/* Buttons */
+.btn.btn-outline:not(.btn-primary,.btn-error,.btn-warning,.btn-success,.btn-neutral,.btn-secondary) {
+	@apply border-base-300;
+}

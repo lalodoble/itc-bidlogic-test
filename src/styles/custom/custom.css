@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+hr, [class*="divide-"] > *, :root {
+	@apply border-base-200;
+}
+

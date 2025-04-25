@@ -1,0 +1,308 @@
+<!--  Start: Order Table -->
+<table
+	class="table table-selectable table-actions table-sticky mb-16 [&_td:nth-child(7)]:text-right [&_th:nth-child(7)]:text-right"
+	id="order_table">
+	<thead class="">
+		<tr>
+			<th>
+				<input id="order_check_all" aria-label="Check all" type="checkbox" data-slot="all-checkbox"
+					class="checkbox checkbox-xs" />
+			</th>
+			<th>
+				<button id="sort-id"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="id">
+					<span>ID</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+				</th>
+			<th>
+				<button id="sort-name"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="name">
+					<span>Name</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+			</th>
+			<th>
+				<button id="sort-category"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="category">
+					<span>Category</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+			</th>
+			<th>
+				<button id="sort-email"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="email">
+					<span>Email</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+			</th>
+			<th>
+				<button id="sort-status"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="status">
+					<span>Status</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+			</th>
+			<th>
+				<button id="sort-activity"
+					class="-mx-2 btn btn-ghost btn-xs group data-[active=true]:text-base-content text-base-content/50 hover:bg-base-200 hover:border-base-200"
+					data-sort-key="activity">
+					<span>Last Activity</span>
+					<i class="uil uil-angle-up opacity-0 group-hover:opacity-100 group-data-[active=true]:opacity-100 group-data-[direction=desc]:rotate-180 transition-transform duration-200 ease-in-out"
+						data-sort-icon></i>
+				</button>
+			</th>
+			<th></th>
+		</tr>
+		</thead>
+	<tbody class="">
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21001</td>
+			<td>5 Items</td>
+			<td>Emily Johnson</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">Paid</div>
+			</td>
+			<td>29 May 2024</td>
+			<td>
+				<div class="dropdown dropdown-end">
+					<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+						<i class="uil uil-ellipsis-v text-base-content/50"></i>
+					</button>
+					<ul tabindex="0" class="dropdown-content menu">
+						<li>
+							<a>
+								<i class="uil uil-user"></i> Action 1
+							</a>
+						</li>
+						<li>
+							<a>
+								<i class="uil uil-arrow-right"></i> Action 2
+							</a>
+						</li>
+						<li>
+							<a class="error">
+								<i class="uil uil-trash-alt"></i> Action 3
+							</a>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21002</td>
+			<td>3 Items</td>
+			<td>Alex Thompson</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td class="text-sm">29 Sep 2023</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21003</td>
+			<td>6 Items</td>
+			<td>Sarah Davis</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-error">
+					Unpaid
+				</div>
+			</td>
+			<td>29 Jan 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21004</td>
+			<td>2 Items</td>
+			<td>Michael Wilson</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-error">
+					Unpaid
+				</div>
+			</td>
+			<td>29 Jul 2023</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+		<tr>
+			<th>
+				<input aria-label="Single check" type="checkbox" data-slot="single-checkbox" class="checkbox checkbox-xs" />
+			</th>
+			<td>#21005</td>
+			<td>7 Items</td>
+			<td>Jessica Miller</td>
+			<td>name@surname.com</td>
+			<td>
+				<div aria-label="Badge" class="badge badge-soft badge-sm badge-success">
+					Paid
+				</div>
+			</td>
+			<td>29 Apr 2024</td>
+			<td>
+				<button tabindex="0" aria-label="Options" class="btn btn-square btn-ghost btn-sm" role="button">
+					<i class="uil uil-ellipsis-v text-base-content/50"></i>
+				</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--  End: Order Table -->

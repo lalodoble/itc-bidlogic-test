@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="itc">
+<head>
+	<title>IT Crowd Backoffice</title>
+	
+	<load src="partials/layout/head.html" />
+</head>
+
+<body>
+	<div class="size-full" id="layout-main">
+	
+		<div class="flex">
+			<load src="partials/layout/sidebar.html" />
+
+			<div class="flex h-screen min-w-0 grow flex-col overflow-auto">
+				<load src="partials/layout/topbar-form.html" />
+				<!--  Start: Layout - Content -->
+				<div class="overflow-auto">
+
+					<!-- Form -->
+					<div class="container max-w-screen-md">
+						<form class="form-container py-12" action="">
+						
+							<h5 class="form-subtitle">Admin User Details</h5>
+							<div class="form-cols">
+								<load src="partials/components/inputText.html" />
+								<load src="partials/components/inputText.html" />
+							</div>
+							<div class="form-cols">
+								<load src="partials/components/inputText.html" />
+								<load src="partials/components/inputText.html" />
+								<load src="partials/components/inputText.html" />
+							</div>
+							
+							
+							
+							<h5 class="form-subtitle">Account</h5>
+							<div class="form-cols">
+								<load src="partials/components/inputSelect.html" />
+								<load src="partials/components/inputText.html" />
+							</div>
+							<div class="form-actions" aria-label="Actions">
+								<button class="btn btn-success min-w-24">
+									Save
+								</button>
+								<a class="btn min-w-24" href="./index.html">
+									Cancel
+								</a>
+							</div>
+							
+							</form>
+					</div>
+					</div>
+				<!--  End: Layout - Content -->
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/filepond/4.31.2/filepond.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/filepond-plugin-image-preview@4.6.12/dist/filepond-plugin-image-preview.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/11.0.2/choices.min.js"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.53.0/apexcharts.min.js"></script>
+	<script src="/assets/js/pages/dashboards/ecommerce.js"></script>
+	<script src="/assets/js/components/table.js"></script>
+	
+	<load src="partials/layout/footer.html" />
+</body>
+</html>

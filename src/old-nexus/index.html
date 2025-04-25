@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-theme="itc">
+<head>
+	<title>IT Crowd Backoffice</title>
+	
+	<load src="partials/layout/head.html" />
+</head>
+
+<body>
+	<div class="size-full" id="layout-main">
+		<div class="flex">
+			<load src="partials/layout/sidebar.html" />
+
+			<div class="flex h-screen min-w-0 grow flex-col">
+				<load src="partials/layout/topbar.html" />
+			
+				<!--  Start: Layout - Content -->
+				<div id="layout-content" class="flex-1 flex flex-col min-h-0">
+					<div class="flex-1 overflow-auto p-4 flex flex-col gap-4">
+						<!-- Filters -->
+						<load src="partials/layout/filters.html" />
+						<!-- Table -->
+						<load src="partials/sections/table.html" />
+					</div>
+				</div>
+
+				<!-- Pagination -->
+				<load src="partials/layout/pagination.html" />
+				<!--  Bulk Actions -->
+				<load src="partials/layout/bulk-actions.html" />
+			
+				<!--  End: Layout - Content -->
+			</div>
+		</div>
+	</div>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.3.0/apexcharts.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.3.0/apexcharts.min.js"></script>
+	<script src="/js/pages/dashboards/ecommerce.js"></script>
+	<script src="/js/components/table.js"></script>
+
+	
+	<load src="partials/layout/footer.html" />
+</body>
+</html>

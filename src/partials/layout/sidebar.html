@@ -1,0 +1,27 @@
+<!--  Start: Layout - Sidebar -->
+
+<input type="checkbox" id="layout-sidebar-toggle-trigger" class="hidden" aria-label="Toggle layout sidebar" />
+
+<div id="layout-sidebar">
+
+	<!-- User Menu -->
+	<load src="partials/layout/nav/user-menu.html" />
+	
+	
+	<!-- MENU -->
+	<div class="relative min-h-0 grow">
+		<div data-simplebar class="size-full">
+			<load src="partials/layout/nav/nav-menu.html" />
+		</div>
+		<div class="from-base-100/60 absolute start-0 end-0 bottom-0 h-7 bg-linear-to-t to-transparent"></div>
+	</div>
+    
+	<a class="flex min-h-16 items-center justify-center" href="/">
+		<img alt="logo-dark" class="hidden h-5 dark:inline" src="/images/logo/logo-dark.png" />
+		<img alt="logo-light" class="h-5 dark:hidden" src="/images/logo/logo-light.png" />
+	</a>
+</div>
+
+<label for="layout-sidebar-toggle-trigger" id="layout-sidebar-backdrop"></label>
+
+<!--  End: Layout - Sidebar -->

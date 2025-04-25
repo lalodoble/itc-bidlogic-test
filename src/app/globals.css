@@ -1,0 +1,21 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Root Styling */
+@import "../styles/typography.css";
+@import "../styles/tailwind.css";
+@import "../styles/daisyui.css";
+
+/* Custom Styling */
+@import "../styles/custom/animation.css";
+@import "../styles/custom/components.css";
+@import "../styles/custom/layout.css";
+
+/* Plugin Overriding */
+@import "../styles/custom/plugins.css";
+
+/* Pages */
+@import "../styles/custom/landing.css";
+
+/* Custom ITC */
+@import "../styles/custom/custom.css";

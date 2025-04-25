@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="itc">
+<head>
+	<title>IT Crowd Dashboard</title>
+	
+	<load src="partials/layout/head.html" />
+</head>
+
+<body>
+	<div class="size-full" id="layout-main">
+		<div class="flex">
+			<load src="partials/layout/sidebar.html" />
+
+			<div class="flex h-screen min-w-0 grow flex-col">
+				<load src="partials/layout/topbar.html" />
+			
+				<!--  Start: Layout - Content -->
+				<div id="layout-content" class="flex-1 flex flex-col min-h-0">
+					<div class="flex-1 overflow-auto p-4 flex flex-col gap-4">
+						<!-- Dashboard Header -->
+						<div class="flex justify-between items-center">
+							<h1 class="text-2xl font-semibold">Dashboard Overview</h1>
+							<div class="flex gap-2">
+								<button class="btn btn-primary">Refresh Data</button>
+								<select class="select select-bordered">
+									<option value="today">Today</option>
+									<option value="week">This Week</option>
+									<option value="month" selected>This Month</option>
+									<option value="year">This Year</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Stats Cards -->
+						<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title text-sm opacity-70">Total Sales</h2>
+									<p class="text-2xl font-bold">$24,589</p>
+									<div class="text-sm text-success flex items-center">
+										<i class="uil uil-arrow-up mr-1"></i> 12.5% from last month
+									</div>
+								</div>
+							</div>
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title text-sm opacity-70">New Customers</h2>
+									<p class="text-2xl font-bold">1,258</p>
+									<div class="text-sm text-success flex items-center">
+										<i class="uil uil-arrow-up mr-1"></i> 5.7% from last month
+									</div>
+								</div>
+							</div>
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title text-sm opacity-70">Completed Orders</h2>
+									<p class="text-2xl font-bold">865</p>
+									<div class="text-sm text-error flex items-center">
+										<i class="uil uil-arrow-down mr-1"></i> 2.4% from last month
+									</div>
+								</div>
+							</div>
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title text-sm opacity-70">Average Order Value</h2>
+									<p class="text-2xl font-bold">$125.40</p>
+									<div class="text-sm text-success flex items-center">
+										<i class="uil uil-arrow-up mr-1"></i> 8.3% from last month
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Charts -->
+						<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title">Revenue Trends</h2>
+									<div id="revenue-chart" class="h-72"></div>
+								</div>
+							</div>
+							<div class="card bg-base-100 shadow-md">
+								<div class="card-body">
+									<h2 class="card-title">Sales by Category</h2>
+									<div id="category-chart" class="h-72"></div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Recent Orders -->
+						<div class="card bg-base-100 shadow-md">
+							<div class="card-body">
+								<div class="flex justify-between items-center mb-4">
+									<h2 class="card-title">Recent Orders</h2>
+									<a href="#" class="text-primary">View All</a>
+								</div>
+								<div class="overflow-x-auto">
+									<table class="table table-zebra">
+										<thead>
+											<tr>
+												<th>Order ID</th>
+												<th>Customer</th>
+												<th>Date</th>
+												<th>Status</th>
+												<th>Amount</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>#ORD-7895</td>
+												<td>John Smith</td>
+												<td>21 Jul 2023</td>
+												<td><span class="badge badge-success">Completed</span></td>
+												<td>$125.99</td>
+											</tr>
+											<tr>
+												<td>#ORD-7894</td>
+												<td>Anna Johnson</td>
+												<td>20 Jul 2023</td>
+												<td><span class="badge badge-warning">Processing</span></td>
+												<td>$78.50</td>
+											</tr>
+											<tr>
+												<td>#ORD-7893</td>
+												<td>Peter Parker</td>
+												<td>19 Jul 2023</td>
+												<td><span class="badge badge-success">Completed</span></td>
+												<td>$254.00</td>
+											</tr>
+											<tr>
+												<td>#ORD-7892</td>
+												<td>Jane Cooper</td>
+												<td>18 Jul 2023</td>
+												<td><span class="badge badge-error">Cancelled</span></td>
+												<td>$155.25</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--  End: Layout - Content -->
+			</div>
+		</div>
+	</div>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.3.0/apexcharts.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/4.3.0/apexcharts.min.js"></script>
+	<script src="/js/pages/dashboards/dashboard.js"></script>
+	<script src="/js/components/table.js"></script>
+	
+	<load src="partials/layout/footer.html" />
+</body>
+</html> 

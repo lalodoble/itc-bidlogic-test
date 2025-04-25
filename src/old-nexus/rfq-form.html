@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en" data-theme="itc">
+<head>
+	<title>Add New RFQ - IT Crowd Dashboard</title>
+	
+	<load src="partials/layout/head.html" />
+</head>
+
+<body>
+	<div class="size-full" id="layout-main">
+	
+		<div class="flex">
+			<load src="partials/layout/sidebar.html" />
+
+			<div class="flex h-screen min-w-0 grow flex-col overflow-auto">
+				<load src="partials/layout/topbar-form.html" />
+				<!--  Start: Layout - Content -->
+				<div class="overflow-auto">
+
+					<!-- Form -->
+					<div class="container max-w-screen-md">
+						<form class="form-container py-12" action="rfq-listing.html">
+						
+							<div class="flex justify-between items-center mb-6">
+								<h1 class="text-2xl font-semibold">Add New RFQ</h1>
+							</div>
+						
+							<h5 class="form-subtitle">Client Information</h5>
+							<div class="form-cols">
+								<div class="form-control w-full">
+									<label class="label">
+										<span class="label-text">Client Name</span>
+										<span class="label-text-alt text-error">*</span>
+									</label>
+									<input type="text" placeholder="Enter client name" class="input input-bordered w-full" required />
+								</div>
+								
+								<div class="form-control w-full">
+									<label class="label">
+										<span class="label-text">Email</span>
+										<span class="label-text-alt text-error">*</span>
+									</label>
+									<input type="email" placeholder="client@example.com" class="input input-bordered w-full" required />
+								</div>
+							</div>
+							
+							<h5 class="form-subtitle">RFQ Details</h5>
+							<div class="form-cols">
+								<div class="form-control w-full">
+									<label class="label">
+										<span class="label-text">Date</span>
+										<span class="label-text-alt text-error">*</span>
+									</label>
+									<input type="date" class="input input-bordered w-full" required />
+								</div>
+								
+								<div class="form-control w-full">
+									<label class="label">
+										<span class="label-text">Priority</span>
+									</label>
+									<select class="select select-bordered w-full">
+										<option value="low">Low</option>
+										<option value="medium" selected>Medium</option>
+										<option value="high">High</option>
+									</select>
+								</div>
+								
+								<div class="form-control w-full">
+									<label class="label">
+										<span class="label-text">Status</span>
+									</label>
+									<select class="select select-bordered w-full">
+										<option value="pending" selected>Pending</option>
+										<option value="in-progress">In Progress</option>
+										<option value="completed">Completed</option>
+									</select>
+								</div>
+							</div>
+							
+							<div class="form-control w-full mb-4">
+								<label class="label">
+									<span class="label-text">RFQ Items</span>
+									<span class="label-text-alt text-error">*</span>
+								</label>
+								<textarea class="textarea textarea-bordered h-32" placeholder="Enter RFQ items details..." required></textarea>
+							</div>
+							
+							<!-- Dynamic Items List -->
+							<div class="card bg-base-100 shadow-sm mb-6">
+								<div class="card-body p-4">
+									<div class="flex justify-between items-center mb-4">
+										<h2 class="card-title text-lg">Items List</h2>
+										<button type="button" class="btn btn-sm btn-primary">
+											<i class="uil uil-plus mr-1"></i> Add Item
+										</button>
+									</div>
+									
+									<div class="overflow-x-auto">
+										<table class="table table-sm">
+											<thead>
+												<tr>
+													<th>Item</th>
+													<th>Quantity</th>
+													<th>Description</th>
+													<th>Action</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<input type="text" placeholder="Item name" class="input input-bordered input-sm w-full" />
+													</td>
+													<td>
+														<input type="number" placeholder="Qty" class="input input-bordered input-sm w-20" min="1" value="1" />
+													</td>
+													<td>
+														<input type="text" placeholder="Description" class="input input-bordered input-sm w-full" />
+													</td>
+													<td>
+														<button type="button" class="btn btn-sm btn-ghost text-error">
+															<i class="uil uil-trash-alt"></i>
+														</button>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							
+							<div class="form-control w-full mb-6">
+								<label class="label">
+									<span class="label-text">Additional Notes</span>
+								</label>
+								<textarea class="textarea textarea-bordered h-24" placeholder="Enter any additional notes..."></textarea>
+							</div>
+							
+							<div class="form-actions" aria-label="Actions">
+								<button type="submit" class="btn btn-success min-w-28">
+									Submit RFQ
+								</button>
+								<a class="btn min-w-28" href="./rfq-listing.html">
+									Cancel
+								</a>
+							</div>
+							
+						</form>
+					</div>
+				</div>
+				<!--  End: Layout - Content -->
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/choices.js/11.0.2/choices.min.js"></script>
+	
+	<load src="partials/layout/footer.html" />
+</body>
+</html> 
