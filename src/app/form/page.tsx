@@ -9,7 +9,7 @@ export default function FormPage() {
         <Sidebar />
 
         <div className="flex h-screen min-w-0 grow flex-col">
-          <Topbar />
+          <Topbar title="Form" />
           
           <div id="layout-content" className="flex-1 flex flex-col min-h-0">
             <FormContent />
